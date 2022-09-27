@@ -1,0 +1,23 @@
+<div *ngIf="categoryName==='people'">
+    <div class="box-it orange">
+        <h1>Characters</h1>
+    </div>
+    
+    <div *ngFor="let c of characterDetails; index as i">
+        <div class="box-it">
+            <h2 [routerLink]="['/people/',i+1]">{{c.name}}</h2>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="categoryName==='films'">
+    <div class="box-it orange">
+        <h1>Films</h1>
+    </div>
+    
+    <div *ngFor="let f of filmsDetails; index as i">
+        <div class="box-it">
+            <h2 [routerLink]="['/films/',i+1]">{{f.title}}</h2>
+        </div>
+    </div>
+</div>
